@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mosquito Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="content">
+        <h1>Analysis of West Nile Virus in Mosquitos Across Chicago Communities</h1>
+    
+        <h4 style="text-align: center;">Nuri Raheem, North Ediale, and Saan Similien</h4>
+
+        <h2>Overview</h2>
+    
+        <h4>West Nile Virus (WNV) Research Question</h4>
+    
+        <p>
+            How can mosquito surveillance data predict West Nile Virus outbreaks and inform targeted public health interventions?
+        </p>
+    
+        <h4>Chicago Mosquito Trap Datasource</h4>
+    
+        <p>
+            The Chicago Department of Public Health set a variety of different mosquito traps across Chicago during breeding season (June - September)
+        </p>
+    
+        <p>
+            Each row represents a record of a specific trap and contents at the time.        </p>
+
+        <hr>
+    
+        <h2>Figures</h2>
+    
+        <h3>Figure 1</h3>    
+
+    </div>
+
+    <div style="text-align:center;">
+        <figure>
+            <iframe src="altair_map/map.html"
+                    style="width:700px; height:800px; border:none;"></iframe>
+        </figure>
+    </div>
+
+    <div class="content">
+        <p>
+            Since each trap contained a wide variety of mosquitos, we thought it would be interesting if there was a geographically preference for certain areas in terms of the number of mosquitos found. For each community trap located in Chicago we got a complete tally for the number of mosquitoes found and mapped it with Altair, followed by getting the individual tally for each date combination. We found that the highest mosquito population occurred more towards the outskirts of the city, specifically East Side to the South East and the Ohare region in the North West. By tracking the prevalence of mosquitoes within each trap we were able to see how each week within the season corresponds to which area of Chicago being affected.
+
+        </p>
+
+        <h3>Figure 2 : Mosquito Species Testing Barplot by Year        </h3>
+    </div>
+
+    <div style="text-align:center;">
+        <figure>
+            <iframe src="D3andchart/species_comparison.html"
+                    style="width:700px; height:650px; border:none;"></iframe>
+        </figure>
+    </div>
+
+    <div class="content">
+        <p>
+            The species comparison demonstrates that CULEX PIPIENS/RESTUANS is the most often tested mosquito species, with over 1,000 tests in peak years, followed by CULEX RESTUANS and CULEX PIPIENS (they are different species when separate). On the other hand, smaller species like CULEX TERRITANS, CULEX SALINARIUS, and CULEX TARSALIS rarely test positive for WNV. The data shows significant year-to-year variation with significant outbreak years in 2012 (25.4% positive rate), 2016 (24% positive rate), and a recent spike in 2024–2025 (23.3% positive rate), indicating that we might be approaching another outbreak time. Positive rates below 2% in low transmission years like 2009 and 2019 show that not all mosquito species present the same threat to infection rates, and surveillance efforts should focus especially on CULEX PIPIENS/RESTUANS and CULEX RESTUANS. During the years of peak outbreak, these species are continuously responsible for the spread of WNV.
+        </p>
+
+        <h3>Figure 3 : West Nile Virus Weekly Risk Timeline</h3>
+    </div>
+
+    <div class='d3_extra_big'>
+        <figure>
+            <iframe src="D3andchart/weekly_timeline.html"
+                    style="height:1100px; width:1500px; border:none;"></iframe>
+        </figure>
+    </div>
+
+    <div class="content">
+        <p>
+            The weekly timeline reveals a consistent seasonal pattern: WNV transmission peaks during weeks 30-35, which correspond to the months of July and August. Additionally, abundance is just as high 1-3 weeks earlier in weeks 28-33. These provide insight into a potential early warning window for public health interventions. This relationship between mosquito population spikes and subsequent increases in positive cases is consistent across all years. Still, outbreak years such as 2012, 2016, 2021, and 2023 show way higher peaks than low-transmission years such as 2009 and 2019. The visualization shows that mosquito control interventions should occur during weeks 25-30 (late June through July) before peak transmission begins. Any later interventions after week 35 miss the critical window for prevention. The consistent timing of this spike across years suggests that temperature and precipitation are key environmental drivers. This means that the implications of climate change may extend the transmission season earlier and later in the year.
+        </p>
+
+        <h3>Figure 4 : Top Communities affected by WNV</h3>
+    
+        <img src="static_figures/top_communities_wnv.png" width="100%" >
+    
+        <p>
+            The bar chart for high risk communities shows significant differences in the West Nile Virus across Chicago. The communities with the highest WVN positive rates in Chicago are North Park (17.7%), O’hare (17.69%), and Edison Park (16.29%). These communities are in the Northern part of Chicago and have infection rates that are nearly double the citywide average of 9-10%. Forest Glen, West Lawn and Dunning also go over 13%, this shows a clear pattern of the Northern parts of Chicago being more exposed to the Virus. It’s interesting because usually you would assume a place that has had more testing done on it would show a larger percentage but not for this data set. O’Hare conducted 4,657 tests while North Park only conducted 435 tests, yet both communities have rates of around 17.7% which proves that the data is accurate and not just a product of a difference in sample size. This data can imply that in these areas the breeding conditions are favorable for mosquitoes, maybe having wetlands or green spaces. 
+        </p>
+
+        <h3>Figure 5 : Trap types over time</h3>
+        
+        <img src="static_figures/trap_types_over_time.png" width="100%">
+        
+        <p>
+            The trap type effectiveness chart shows that SENTINEL traps have the highest WVN detection rates (15.05% overall), exceeding 15-25% during outbreak years. SENTINEL traps were probably used in high risk locations where the mosquitoes were more prevalent. GRAVID traps had a steadier performance at around 9.77% overall and account for most of the testing done with 36,586 tests. The CDC traps came last with 6.29% overall but was used most in the 2012 outbreak. All 3 traps showed a spike during outbreak years (2012, 2016, 2021, 2024) which represent WNV increases rather than just detection data. The visualization gives insight to how they tracked this Virus in Chicago, most likely using GRAVID the most consistently since it provided reliable results for 2 decades. SENTINEL was most likely used for high risk areas for special detection. The spike in 2025 leaves room for concern as it might mean that there’s another outbreak happening now or soon. 
+
+        </p>
+
+    </div>
+
+</body>
+</html>
